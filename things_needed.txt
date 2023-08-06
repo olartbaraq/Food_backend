@@ -1,0 +1,37 @@
+Model
+
+1 - User Model
+    first name
+    last name
+    email - EmailField
+    Password - PasswordField
+    created_at - DateField
+    updated_at - DateField
+
+
+2-  FoodCategory Model
+
+    name
+    starting_price
+    created_at - DateField
+    updated_at - DateField
+    One to Many to FoodModel
+    ondelete = cascade foodmodel
+    time_to_deliver 
+
+3-  Food Model
+
+    name
+    price
+    restaurant_belongs_to (Foregn Key to restaurant)
+    category_belongs_to (Foregn Key to FoodCategory)
+    created_at - DateField
+    updated_at - DateField
+
+4 - restaurant
+
+    name
+    location
+    created_at - DateField
+    updated_at - DateField
+    on_delete - cascade delete (delete just restaurant)
